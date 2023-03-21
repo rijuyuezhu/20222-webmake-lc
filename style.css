@@ -1,13 +1,34 @@
+:root {
+/* The size accroding to the times of eight */
+    --size-s: 8px;
+    --size-m: 16px;
+    --size-l: 24px;
+    --size-xl: 32px;
+    --size-xxl: 40px;
+
+/* Some colors */
+    --col-bitwhite: #fcfcfc;
+    --col-white: #fff;
+    --col-blue: #6cf;
+    --col-black: #000;
+}
+
+/* Delete the margin of html */
+html {
+    margin: 0;
+}
+
 /* Set the background color of the page */
 body {
-    background-color: #f2f2f2;
+    background-color: var(--col-grey);
 }
 
 /* Style the header */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px;
+    color: var(--col-white);
+    font-size: var(--size-xxl);
+    padding: var(--size-l);
     text-align: center;
 }
 
@@ -20,14 +41,14 @@ main {
 
 /* Style the section headings */
 section h2 {
-    font-size: 24px;
+    font-size: var(--size-l);
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
 /* Style the paragraphs */
 p {
-    font-size: 18px;
+    font-size: var(--size-m)
     line-height: 1.5;
 }
 
@@ -50,4 +71,12 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 5px #ccc;
+}
+
+a {
+    color: var(--col-blue);
+}
+
+.container {
+    display: flex;
 }
