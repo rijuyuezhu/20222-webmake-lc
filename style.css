@@ -1,5 +1,5 @@
 :root {
-/* The size accroding to the times of eight */
+/* The size according to the times of eight */
     --size-s: 8px;
     --size-m: 16px;
     --size-l: 24px;
@@ -11,6 +11,7 @@
     --col-white: #fff;
     --col-blue: #6cf;
     --col-black: #000;
+    --col-grey: #f2f2f2;
 }
 
 /* Delete the margin of html */
@@ -48,7 +49,7 @@ section h2 {
 
 /* Style the paragraphs */
 p {
-    font-size: var(--size-m)
+    font-size: var(--size-m);
     line-height: 1.5;
 }
 
