@@ -28,7 +28,7 @@ function generateQuiz(questions) {
                 currentQuestionIndex++;
                 if (currentQuestionIndex >= questions.length) {
                     // 游戏结束
-                    questionElement.innerText = "游戏结束";
+                    questionElement.innerText = "游戏结束，刷新网页以重玩";
                     choicesElement.innerHTML = "";
                     submitButton.disabled = true;
                 } else {

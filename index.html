@@ -10,9 +10,16 @@
 <header>
     <b>让<a href="https://www.bilibili.com/bangumi/play/ss43164">波奇酱</a>带你遨游液晶高分子乐园！</b>
 </header>
-<div class="container">
-    <img src="1.jpeg" alt="a anime girl"/>
-    <p></p>
+<div class="flex-container">
+    <div class="flex-grow">
+        <img src="assets/1.jpeg" alt="a anime girl" width="700"/>
+    </div>
+    <div class="flex-grow">
+        <h1>欢迎来到液晶大分子的世界！</h1>
+        <li>
+            (待插入文本)
+        </li>
+    </div>  
 </div>
 
 <main>
@@ -74,16 +81,14 @@
         <p id="result"></p>
     </div>-->
 
+    <hr>
+
     <div>
-        <h2>液晶高分子知识问答</h2>
-        <p id="question"></p>
-        <div id="choices"></div>
-        <button id="submit">提交</button>
-        <p id="score">得分: 0</p>
-    </div>
-
-    <div class="">
-
+        <h1 class="u-center">液晶高分子知识问答</h1>
+        <p id="question" class="u-center"></p>
+        <div id="choices" class="u-center"></div>
+        <br />
+        <p id="score" class="u-right">得分: 0</p>
     </div>
 </main>
 <script src="script.js"></script>

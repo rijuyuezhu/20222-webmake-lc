@@ -41,15 +41,21 @@ main {
 }
 
 /* Style the section headings */
+h1 {
+    font-size: var(--size-xxl);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 section h2 {
-    font-size: var(--size-l);
+    font-size: var(--size-xl);
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
 /* Style the paragraphs */
 p {
-    font-size: var(--size-m);
+    font-size: var(--size-l);
     line-height: 1.5;
 }
 
@@ -61,7 +67,7 @@ ul {
 
 /* Style the list items */
 li {
-    font-size: 18px;
+    font-size: var(--size-l);
     line-height: 1.5;
 }
 
@@ -78,6 +84,28 @@ a {
     color: var(--col-blue);
 }
 
-.container {
+.flex-container {
     display: flex;
+}
+
+.introduction {
+    font-size: var(--size-l);
+    line-height: 1.5;
+}
+
+.u-center {
+    text-align: center;
+}
+
+.u-right {
+    text-align: right;
+}
+
+.flex-grow {
+    flex-grow: 1;
+    align-items: 2;
+}
+
+button {
+    font-size: var(--size-xxl);
 }
