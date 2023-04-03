@@ -161,11 +161,13 @@ button {
 .hr-wavy {
     border: 0;
     color: var(--col-blue);
-    height: .5em;
+    height: 2px;
     white-space: nowrap;
     letter-spacing: 100vw;
-    padding-top: .5em;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
+
 .hr-wavy::before {
     content: "\2000\2000";
     /* IE浏览器实线代替 */
@@ -174,6 +176,28 @@ button {
     text-decoration: overline wavy;
 }
 
+ .hr-space-square {
+    border: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: var(--col-not-so-black);
+    background: linear-gradient(currentColor, currentColor) no-repeat center;
+    background-size: calc(100% - 1.5em - 6px) 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.hr-space-square::before,
+.hr-space-square::after {
+    content: '';
+    display: block;
+    width: .75em; height: .75em;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+    border: 1px solid;
+    margin: 3px;
+}
+
+
 a {
     text-decoration: underline;
     color: var(--col-not-so-black)
@@ -181,4 +205,7 @@ a {
 
 .u-text-dec-none {
     text-decoration: none;
+}
+
+.border {
 }
