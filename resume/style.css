@@ -30,3 +30,8 @@
   /* Add image */
   background-image: url("assets/hwr-avatar.jpg");
 }
+
+.lrc-avatar {
+  /* Add image */
+  background-image: url("assets/lrc-avatar.jpg");
+}
