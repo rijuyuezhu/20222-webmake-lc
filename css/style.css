@@ -21,6 +21,9 @@
 html {
     margin: 0;
 }
+body {
+    margin: 0;
+}
 
 /* Set the background color of the page */
 body {
@@ -31,7 +34,7 @@ body {
 header {
     background-color: var(--col-blue);
     color: var(--col-white);
-    font-size: var(--size-l);
+    font-size: var(--size-xl);
     padding: var(--size-l);
     text-align: center;
 }
@@ -56,6 +59,12 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: var(--size-l);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 /* Style the paragraphs */
 p {
     font-size: var(--size-l);
@@ -76,6 +85,7 @@ li {
 
 /* Style the images */
 img {
+    border-radius: 5%;
     height: auto;
     margin: 40px;
 }
@@ -102,6 +112,11 @@ img {
     align-items: center;
 }
 
+.flex-grow {
+    flex: 2;
+    align-items: center;
+}
+
 button {
     font-size: var(--size-xxl);
 }
@@ -111,9 +126,9 @@ button {
 }
 
 .center-block {
-    display: block;
     margin: auto;
-    width: 70%    
+    padding: var(--size-m) var(--size-m);
+    width: 80%;
 }
 
 .u-margin-right {
