@@ -128,13 +128,13 @@ button {
 .center-block {
     margin: auto;
     padding: var(--size-m) var(--size-m);
-    width: 70%;
+    width: 65%;
 }
 
 .center-block-wide {
     margin: auto;
     padding: var(--size-m) var(--size-m);
-    width: 90%;
+    width: 85%;
 }
 
 
