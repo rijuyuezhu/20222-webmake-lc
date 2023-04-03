@@ -160,7 +160,7 @@ button {
 
 .hr-wavy {
     border: 0;
-    color: #d0d0d5;
+    color: var(--col-blue);
     height: .5em;
     white-space: nowrap;
     letter-spacing: 100vw;
