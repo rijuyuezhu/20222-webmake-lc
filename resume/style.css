@@ -35,3 +35,8 @@
   /* Add image */
   background-image: url("assets/lrc-avatar.jpg");
 }
+
+.wwd-avatar {
+  /* Add image */
+  background-image: url("assets/wwd-avatar.jpg");
+}
