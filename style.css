@@ -88,7 +88,7 @@ li {
 img {
     border-radius: 5%;
     height: auto;
-    margin: 40px;
+    margin: 20px 40px;
 }
 
 .flex-container {
@@ -172,8 +172,8 @@ button {
     height: 2px;
     white-space: nowrap;
     letter-spacing: 100vw;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .hr-wavy::before {
@@ -186,8 +186,8 @@ button {
 
  .hr-space-square {
     border: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: var(--col-not-so-black);
     background: linear-gradient(currentColor, currentColor) no-repeat center;
     background-size: calc(100% - 1.5em - 6px) 1px;
