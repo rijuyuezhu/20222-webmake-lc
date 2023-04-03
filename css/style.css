@@ -9,7 +9,7 @@
 /* Some colors */
     --col-bitwhite: #fcfcfc;
     --col-white: #fff;
-    --col-blue: #6cf;
+    --col-blue: #396dff;
     --col-black: #000;
     --col-not-so-black: #333;
     --col-grey: #f2f2f2;
@@ -29,9 +29,9 @@ body {
 
 /* Style the header */
 header {
-    background-color: var(--col-not-so-black);
+    background-color: var(--col-blue);
     color: var(--col-white);
-    font-size: var(--size-xxl);
+    font-size: var(--size-l);
     padding: var(--size-l);
     text-align: center;
 }
@@ -155,4 +155,8 @@ button {
 a {
     text-decoration: underline;
     color: var(--col-not-so-black)
+}
+
+.u-text-dec-none {
+    text-decoration: none;
 }
