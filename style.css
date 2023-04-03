@@ -71,6 +71,7 @@ p {
     line-height: 1.5;
 }
 
+
 /* Style the unordered list */
 ul {
     margin-top: 20px;
@@ -112,7 +113,7 @@ img {
     align-items: center;
 }
 
-.flex-grow {
+.flex-grow-double {
     flex: 2;
     align-items: center;
 }
@@ -135,6 +136,13 @@ button {
     margin: auto;
     padding: var(--size-m) var(--size-m);
     width: 85%;
+}
+
+
+.center-block-no-confine {
+    margin: auto;
+    padding: var(--size-m) var(--size-m);
+    width: 100%;
 }
 
 
@@ -207,5 +215,7 @@ a {
     text-decoration: none;
 }
 
-.border {
+.hint {
+    font-size: 20px;
+    line-height: 1.5;
 }
