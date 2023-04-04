@@ -1,6 +1,6 @@
 # <p align="center">小组分工安排</p>
 
-## PART I 概览
+## 一、概览
 
 ### 小组成员
 
@@ -32,7 +32,7 @@
 |8|黄嘉祺|同上|
 |9|黄文睿|将展示成果|
 
-## 网页内容规划
+## 二、网页内容规划
 
 ### PART I Bocci story(已完成)
 
@@ -65,3 +65,14 @@
 ### PART VI End(已完成)
 
 网页的结语。
+
+## 第二部分分工
+
+|PART 名称|负责人(内容)|负责人(网页)|备注|
+|:-:|:-:|:-:|:-:|
+|PART I Bocci story|/|/|已完成|
+|PART II Introduction|黄嘉祺|黄文睿|
+|PART III Guess|李昊洋|黄文睿||
+|PART IV Factory|王卫东|李瑞晨||
+|PART V Quiz|李昊洋|李瑞晨||
+|PART VI End|/|/|已完成|
