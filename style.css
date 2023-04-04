@@ -49,19 +49,19 @@ main {
 /* Style the section headings */
 h1 {
     font-size: var(--size-xxl);
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: var(--size-xl);
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 h3 {
     font-size: var(--size-l);
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
