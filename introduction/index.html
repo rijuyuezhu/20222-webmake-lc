@@ -6,6 +6,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="../style.css"/>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <a href="../index.html" class="u-text-dec-none">
@@ -21,10 +22,37 @@
             <div class="u-center">
                 <p>下文将简要介绍<b>液晶大分子（LCP）</b>。挑选你喜欢的部分阅读吧！</p>
             </div>
-            <h2 class="u-font-color-purple u-center">液晶大分子概述</h2>
-            <div class="u-text-indent">
-                <p>液晶高分子（LCP）是一种可控热致改性的高性能聚合物，其特殊的分子结构使其表现出出色的机械性能、热稳定性、化学稳定性、绝缘性、低介电常数、低增益和低电荷存储等特点。LCP材料是可控热致改性的材料，当受到热量刺激时，它具有液晶状态和非晶态状态之间的相变特性，这使得它可以应用于多种环境下。</p>
+            <hr class="hr-wavy" />
+            <div class="u-right">
+                <button type="button" onclick="changeMode()" class="normal-button"><h3 id="modeChangeButton">内容：简约</h3>
             </div>
+
+
+            <!-- overall -->
+            <div class="flex-container">
+                <div class="flex-grow center-block-no-confine">
+                    <h2 class="u-font-color-purple u-center ">概述</h2>
+                </div>
+                <div class="flex-grow-most left-border">
+                <div class="center-block-wide">
+                    <div class="concise" style="display: block">
+                        <ul>
+                        <li>液晶高分子（LCP）是一种<b>高分子聚合物</b>。</li>
+                        <li>具有出色的<b>机械性能、热稳定性、化学稳定性、绝缘性。</b></li>
+                        <li>随着温度不同，液晶高分子可以呈现出不同形态——<b>液晶态</b>和<b>非液晶态</b>。</li>
+                        </ul>
+                    </div>
+                    <div class="more-details" style="display: none">
+                        <div class="u-text-indent">
+                            <p>液晶高分子（LCP）是一种可控热致改性的高性能聚合物，其特殊的分子结构使其表现出出色的机械性能、热稳定性、化学稳定性、绝缘性、低介电常数、低增益和低电荷存储等特点。LCP材料是可控热致改性的材料，当受到热量刺激时，它具有液晶状态和非晶态状态之间的相变特性，这使得它可以应用于多种环境下。</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <hr class="hr-space-square" />
+
+
             <p class="return-box"><a href="../index.html#guess">返回主页，玩个小游戏巩固一下吧！</a></p>
             <hr class="hr-wavy" />
 
@@ -45,5 +73,6 @@
                 </div>
             </div>  
         </div>
+        <script src="modeChange.js"></script>
     </body>
 </html>

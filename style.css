@@ -55,14 +55,15 @@ h1 {
 
 h2 {
     font-size: var(--size-xl);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 h3 {
     font-size: var(--size-l);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Style the paragraphs */
@@ -71,6 +72,12 @@ p {
     line-height: 1.5;
 }
 
+summary {
+    font-size: var(--size-l);
+    line-height: 1.5;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
 
 /* Style the unordered list */
 ul {
@@ -93,6 +100,7 @@ img {
 
 .flex-container {
     display: flex;
+    padding: 20px;
 }
 
 .introduction {
@@ -118,9 +126,11 @@ img {
     align-items: center;
 }
 
-button {
-    font-size: var(--size-xxl);
+.flex-grow-most {
+    flex: 7;
+    align-items: center;
 }
+
 
 .u-font-color-red {
     color: red;
@@ -130,6 +140,9 @@ button {
     color: var(--col-purple);
 }
 
+.u-font-color-dark-blue {
+    color: var(--col-dark-blue);
+}
 .center-block {
     margin: auto;
     padding: var(--size-m) var(--size-m);
@@ -227,4 +240,18 @@ a {
 .return-box {
     text-align: center;
     padding: 30px 0;
+}
+
+.left-border {
+    border-left: 5px dotted var(--col-black);
+    margin-left: 50px;
+}
+
+.normal-button {
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 10px;
+    padding: 0.2em 1em;
+    color: var(--col-white);
+    background-color: var(--col-not-so-black);
 }
