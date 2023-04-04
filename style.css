@@ -86,7 +86,7 @@ li {
 
 /* Style the images */
 img {
-    border-radius: 5%;
+    border-radius: 20px;
     height: auto;
     margin: 20px 40px;
 }
@@ -120,6 +120,10 @@ img {
 
 button {
     font-size: var(--size-xxl);
+}
+
+.u-font-color-red {
+    color: red;
 }
 
 .u-font-color-purple {
