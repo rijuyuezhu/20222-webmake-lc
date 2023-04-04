@@ -172,8 +172,8 @@ button {
     height: 2px;
     white-space: nowrap;
     letter-spacing: 100vw;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .hr-wavy::before {
