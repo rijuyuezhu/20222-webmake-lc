@@ -34,6 +34,26 @@
 
 ## 网页内容规划
 
-### PART I Bocci story
+### PART I Bocci story(已完成)
 
 讲述波奇酱的故事，作为整个网站的引子。
+
+### PART II Introduction
+
+主要介绍液晶高分子的基础内容，采用多个章节进行介绍。
+
+### PART III Guess
+
+给出图片（三选一），猜猜哪个图片应用了 LCP。
+
+### PART IV Factory
+
+让波奇酱带你参观工厂。
+
+### PART V Quiz
+
+做题。
+
+### PART VI End(已完成)
+
+网页的结语。
