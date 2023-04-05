@@ -202,19 +202,22 @@ const generateReason = () => {
 const answerProblem = () => {
     ++ansProblemNumber;
     let correct = 1;
-    for(let i = 0; i < 3; i++)
+    let answerString = "";
+    for(let i = 0; i < 3; i++) {
         if(buttonStatus[i] !== games[nowProblemNumber][i].cor) {
             correct = 0;
-            break;
         }
+        if(games[nowProblemNumber][i].cor)
+            answerString += numberToABC(i);
+    }
     document.getElementById("buttonArray").style.display = "none";
     
     const answerReact = document.getElementById("answerReact");
     if(correct) {
-        answerReact.innerHTML = "恭喜，答案正确！";
+        answerReact.innerHTML = "恭喜，答案正确！答案是 " + answerString;
         ++point;
     } else {
-        answerReact.innerHTML = "抱歉，答案错误！";
+        answerReact.innerHTML = "抱歉，答案错误！答案是 " + answerString;
     }
     generateReason();
     updateScore();
