@@ -3,11 +3,10 @@
     margin-left: 50px;
 }
 
-.normal-button {
+.change-button {
     margin: 2px 0;
-    border: solid 1px transparent;
+    border: solid 3px var(--col-black);
     border-radius: 10px;
     padding: 0.2em 1em;
-    color: var(--col-white);
-    background-color: var(--col-not-so-black);
+    color: var(--col-purple);
 }
