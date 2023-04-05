@@ -74,6 +74,44 @@ const games = [
             cor: 1,
             reason: "显然是"
         }
+    ],
+
+    //Problem 4
+    [
+        {
+            description: "A. 防火材料",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "B. 棉纱手套",
+            cor: 0,
+            reason: "显然不是"
+        },
+        {
+            description: "C. 消防沙",
+            cor: 0,
+            reason: "显然不是"
+        }
+    ],
+
+    //Problem 5
+    [
+        {
+            description: "A. 图像显示",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "B. 信息存储",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "C. 温度检测",
+            cor: 1,
+            reason: "显然是"
+        }
     ]
 ];
 
