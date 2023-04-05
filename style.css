@@ -15,6 +15,7 @@
     --col-grey: #f2f2f2;
     --col-purple: rgb(91, 6, 202);
     --col-dark-blue: rgb(0, 89, 255);
+    --col-orange: #ffbb00;
 }
 
 /* Delete the margin of html */
@@ -95,7 +96,7 @@ li {
 img {
     border-radius: 20px;
     height: auto;
-    margin: 20px 40px;
+    margin: 0 auto;
 }
 
 .flex-container {
@@ -173,10 +174,12 @@ img {
 
 .u-float-right {
     float: right;
+    margin-left: 30px;
 }
 
 .u-float-left {
     float: left;
+    margin-right: 30px;
 }
 
 .u-text-indent {
@@ -239,5 +242,5 @@ a {
 
 .return-box {
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
 }

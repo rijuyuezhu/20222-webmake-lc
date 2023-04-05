@@ -6,6 +6,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="../style.css"/>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <a href="../index.html"
@@ -19,7 +20,116 @@
             <div>
             <p class="u-font-color-red u-center">!!! NOT DONE YET.</p>
             </div>
-            <p class="return-box"><a href="../index.html#factory">返回主页，继续后面的内容吧！</a></p>
+
+            <hr class="hr-space-square" />
+
+            <div class="u-center" id="introMessage">
+            <h2>游戏规则</h2>
+            <p>每组题给出三张图片，请从中选择若干张你认为<b>运用了液晶大分子</b>的图片！</p>
+            <p>注意是<b>不定项选择</b>哦！</p>
+            <button type="button" class="default-button" onclick="gameRun()"><h3>开始游戏</h3></button>
+            </div>
+            
+            <div id="gamePannel" style="display: none;">
+                <h2 class="u-font-color-purple u-center">以下运用了大分子材料的是：（不定项选择）</h2>
+
+                <!-- pic -->
+                <div class="flex-container u-center" style="padding-bottom: 0;">
+                    <div class="flex-grow center-block-no-confine">
+                        <img src="assets/0/A.png" alt="手机天线" width="80%" class="option"/> 
+                    </div>
+                    <div class="flex-grow center-block-no-confine">
+                        <img src="assets/0/B.png" alt="电容" width="80%" class="option"/> 
+                    </div>
+                    <div class="flex-grow center-block-no-confine">
+                        <img src="assets/0/C.png" alt="雷达天线屏蔽罩" width="80%" class="option"/> 
+                    </div>
+                </div>
+
+                <!-- des -->
+                <div class="flex-container" style="padding-top: 0; padding-bottom: 0;">
+                    <div class="flex-grow center-block-no-confine" style="padding-top: 0; padding-bottom: 0;">
+                        <div class="u-center">
+                        <p class="optionDescription">A. 手机天线</p>
+                        </div>
+                    </div>
+                    <div class="flex-grow center-block-no-confine" style="padding-top: 0; padding-bottom: 0;">
+                        <div class="u-center">
+                        <p class="optionDescription">B. 电容</p>
+                        </div>
+                    </div>
+                    <div class="flex-grow center-block-no-confine" style="padding-top: 0; padding-bottom: 0;">
+                        <div class="u-center">
+                        <p class="optionDescription">C. 雷达天线屏蔽罩</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- button -->
+                <div id="buttonArray">
+                <div class="flex-container">
+                    <div class="flex-grow center-block-no-confine">
+                        <div class="u-center">
+                        <button type="button" class="optionButtons default-button" onclick="changeButtonStatus(0)"><h3>选择该项</h3></button>
+                        </div>
+                    </div>
+                    <div class="flex-grow center-block-no-confine">
+                        <div class="u-center">
+                        <button type="button" class="optionButtons default-button" onclick="changeButtonStatus(1)"><h3>选择该项</h3></button>
+                        </div>
+                    </div>
+                    <div class="flex-grow center-block-no-confine">
+                        <div class="u-center">
+                        <button type="button" class="optionButtons default-button" onclick="changeButtonStatus(2)"><h3>选择该项</h3></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center">
+                <button type="button" class="default-button" onclick="answerProblem()"  style="color: var(--col-blue)"><h3>确认作答</h3></button>
+                </div>
+                </div>
+
+                <!-- the feedback zone -->
+                <div id="answerShow" style="display: none;">
+                    <h2 id="answerReact" class="u-center"></h2>
+                    <div class="flex-container">
+                        <div class="flex-grow center-block-no-confine">
+                            <div class="u-center">
+                                <h3 class="answerJudge"></h3>
+                                <p class="answerReason"></p>
+                            </div>
+                        </div>
+                        <div class="flex-grow center-block-no-confine">
+                            <div class="u-center">
+                                <h3 class="answerJudge"></h3>
+                                <p class="answerReason"></p>
+                            </div>
+                        </div>
+                        <div class="flex-grow center-block-no-confine">
+                            <div class="u-center">
+                                <h3 class="answerJudge"></h3>
+                                <p class="answerReason"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-center">
+                    <button type="button" class="default-button" onclick="nextProblem()"  style="color: var(--col-blue)" id="nextProblemButton"><h3></h3></button>
+                    </div>
+                </div>
+                
+                <!-- count -->
+                <div class="center-block flex-container">
+                <p class="u-center flex-grow", id="scoreShow">得分：0</p>
+                <p class="u-center flex-grow", id="percentShow">正确率：100%</p>
+                <p class="u-center flex-grow" id="problemNumber">题目：0/0</p>
+                </div>
+            </div>
+
+            <div id="returnBox" style="display: none;">
+                <p class="return-box"><a href="">再来一次！</a></p>
+                <p class="return-box"><a href="../index.html#factory">返回主页，继续后面的内容吧！</a></p>
+            </div>
         </div>
 
         <hr class="hr-space-square"/>
@@ -37,5 +147,6 @@
                 </div>
             </div>  
         </div>
+        <script src="game.js"></script>
     </body>
 </html>
