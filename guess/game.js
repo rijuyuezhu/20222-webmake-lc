@@ -36,6 +36,44 @@ const games = [
             cor: 1,
             reason: "显然是"
         }
+    ],
+
+    //problem 2
+    [
+        {
+            description: "A. 建筑承重",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "B. 牵引绳缆",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "C. 软糖",
+            cor: 0,
+            reason: "显然不是"
+        }
+    ],
+    
+    //Problem 3
+    [
+        {
+            description: "A. 人造心脏",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "B. 人造血管",
+            cor: 1,
+            reason: "显然是"
+        },
+        {
+            description: "C. 防弹衣",
+            cor: 1,
+            reason: "显然是"
+        }
     ]
 ];
 
@@ -54,7 +92,8 @@ const changeButtonStatus = (id) => {
 }
 
 let point = 0;
-let nowProblem = 0;
+let nowProblemNumber = 0;
+let ansProblemNumber = 0;
 
 const numberToABC = (number) => {
     switch(number) {
@@ -76,13 +115,13 @@ const updateScore = () => {
     score.innerHTML = "得分：" + point.toString();
 
     let percentShow = 0;
-    if(nowProblem === 0) {
+    if(ansProblemNumber === 0) {
         percentShow = 100;
     } else {
-        percentShow = (100 * point / nowProblem).toFixed(0);
+        percentShow = (100 * point / ansProblemNumber).toFixed(0);
     }
     percent.innerHTML = "正确率：" + percentShow.toString() + "%";
-    problemNumber.innerHTML = "题目：" + (1 + nowProblem).toString() + "/" + games.length.toString();
+    problemNumber.innerHTML = "题目：" + (1 + nowProblemNumber).toString() + "/" + games.length.toString();
 }
 
 const jumpGame = () => {
@@ -94,17 +133,17 @@ const showProblem = () => {
     document.getElementById("answerShow").style.display = "none";
     const optionImgs = Array.from(document.getElementsByClassName("option"));
     for(let i = 0; i < 3; i++) {
-        optionImgs[i].src = "assets/" + nowProblem.toString() + "/" + numberToABC(i) + ".png";
+        optionImgs[i].src = "assets/" + nowProblemNumber.toString() + "/" + numberToABC(i) + ".png";
     }
     const optionDes = Array.from(document.getElementsByClassName("optionDescription"));
     for(let i = 0; i < 3; i++) {
-        optionDes[i].innerHTML = games[nowProblem][i].description;
+        optionDes[i].innerHTML = games[nowProblemNumber][i].description;
     }
     for(let i = 0; i < 3; i++) {
         if(buttonStatus[i] === 1)
             changeButtonStatus(i);
     }
-    updateScore(nowProblem);
+    updateScore();
     document.getElementById("buttonArray").style.display = "block";
 }
 
@@ -112,19 +151,20 @@ const generateReason = () => {
     const answerJudge = Array.from(document.getElementsByClassName("answerJudge"));
     const answerReason = Array.from(document.getElementsByClassName("answerReason"));
     for(let i = 0; i < 3; i++) {
-        if(games[nowProblem][i].cor) {
+        if(games[nowProblemNumber][i].cor) {
             answerJudge[i].innerHTML = numberToABC(i) + ". 运用了 LCP";
         } else {
             answerJudge[i].innerHTML = numberToABC(i) + ". 未运用 LCP";
         }
-        answerReason[i].innerHTML = games[nowProblem][i].reason;
+        answerReason[i].innerHTML = games[nowProblemNumber][i].reason;
     }
 }
 
 const answerProblem = () => {
+    ++ansProblemNumber;
     let correct = 1;
     for(let i = 0; i < 3; i++)
-        if(buttonStatus[i] !== games[nowProblem][i].cor) {
+        if(buttonStatus[i] !== games[nowProblemNumber][i].cor) {
             correct = 0;
             break;
         }
@@ -138,11 +178,12 @@ const answerProblem = () => {
         answerReact.innerHTML = "抱歉，答案错误！";
     }
     generateReason();
+    updateScore();
 
     //prepare next problem
-    ++nowProblem;
+    ++nowProblemNumber;
     const nextProblemButton = document.getElementById("nextProblemButton");
-    if(nowProblem === games.length) {
+    if(nowProblemNumber === games.length) {
         nextProblemButton.innerHTML = "<h3>结束游戏</h3>";
     } else {
         nextProblemButton.innerHTML = "<h3>下一道题</h3>";
@@ -158,7 +199,7 @@ const gameEnd = () => {
 
 
 const nextProblem = () => {
-    if(nowProblem === games.length) {
+    if(nowProblemNumber === games.length) {
         gameEnd();
     } else {
         showProblem();
@@ -172,7 +213,8 @@ const gameRun = () => {
     document.getElementById("countPannel").style.display = "flex";
     jumpGame();
     point = 0;
-    nowProblem = 0;
+    nowProblemNumber = 0;
+    ansProblemNumber = 0;
     updateScore();
     showProblem();
 }
