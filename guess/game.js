@@ -163,11 +163,12 @@ const updateScore = () => {
 }
 
 const jumpGame = () => {
-    target = document.getElementById("gamePannel");
+    target = document.getElementById("countPannel");
     window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
 }
 
 const showProblem = () => {
+    jumpGame();
     document.getElementById("answerShow").style.display = "none";
     const optionImgs = Array.from(document.getElementsByClassName("option"));
     for(let i = 0; i < 3; i++) {

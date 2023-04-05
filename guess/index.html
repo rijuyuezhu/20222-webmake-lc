@@ -29,6 +29,13 @@
             <p>注意是<b>不定项选择</b>哦！</p>
             <button type="button" class="default-button" onclick="gameRun()"><h3>开始游戏</h3></button>
             </div>
+
+            <!-- count -->
+            <div class="center-block flex-container" id="countPannel" style="display: none;">
+            <p class="u-center flex-grow", id="scoreShow">得分：0</p>
+            <p class="u-center flex-grow", id="percentShow">正确率：100%</p>
+            <p class="u-center flex-grow" id="problemNumber">题目：0/0</p>
+            </div>
             
             <div id="gamePannel" style="display: none;">
                 <h2 class="u-font-color-purple u-center">以下运用了大分子材料的是：（不定项选择）</h2>
@@ -120,12 +127,6 @@
                 
             </div>
 
-            <!-- count -->
-            <div class="center-block flex-container" id="countPannel" style="display: none;">
-            <p class="u-center flex-grow", id="scoreShow">得分：0</p>
-            <p class="u-center flex-grow", id="percentShow">正确率：100%</p>
-            <p class="u-center flex-grow" id="problemNumber">题目：0/0</p>
-            </div>
 
             <div id="returnBox" style="display: none;">
                 <p class="return-box"><a href="">再来一次！</a></p>
