@@ -82,7 +82,7 @@ const updateScore = () => {
         percentShow = (100 * point / nowProblem).toFixed(0);
     }
     percent.innerHTML = "正确率：" + percentShow.toString() + "%";
-    problemNumber.innerHTML = "题目：" + nowProblem.toString() + "/" + games.length.toString();
+    problemNumber.innerHTML = "题目：" + (1 + nowProblem).toString() + "/" + games.length.toString();
 }
 
 const jumpGame = () => {
@@ -141,8 +141,6 @@ const answerProblem = () => {
 
     //prepare next problem
     ++nowProblem;
-    updateScore();
-
     const nextProblemButton = document.getElementById("nextProblemButton");
     if(nowProblem === games.length) {
         nextProblemButton.innerHTML = "<h3>结束游戏</h3>";
@@ -171,6 +169,7 @@ const gameRun = () => {
     //Begin
     document.getElementById("introMessage").style.display = "none";
     document.getElementById("gamePannel").style.display = "block";
+    document.getElementById("countPannel").style.display = "flex";
     jumpGame();
     point = 0;
     nowProblem = 0;
