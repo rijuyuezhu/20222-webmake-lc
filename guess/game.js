@@ -115,6 +115,8 @@ const games = [
     ]
 ];
 
+const Pictures = [];
+
 const buttons = Array.from(document.getElementsByClassName("optionButtons"));
 let buttonStatus = [0, 0, 0];
 const changeButtonStatus = (id) => {
@@ -172,7 +174,9 @@ const showProblem = () => {
     document.getElementById("answerShow").style.display = "none";
     const optionImgs = Array.from(document.getElementsByClassName("option"));
     for(let i = 0; i < 3; i++) {
-        optionImgs[i].src = "assets/" + nowProblemNumber.toString() + "/" + numberToABC(i) + ".png";
+        if(optionImgs[i].hasChildNodes)
+            optionImgs[i].removeChild(optionImgs[i].firstChild);
+        optionImgs[i].appendChild(Pictures[nowProblemNumber][i]);
     }
     const optionDes = Array.from(document.getElementsByClassName("optionDescription"));
     for(let i = 0; i < 3; i++) {
@@ -260,3 +264,20 @@ const gameRun = () => {
     updateScore();
     showProblem();
 }
+
+const initialize = () => {
+    for(let i = 0; i < games.length; i++) {
+        const picList = [];
+        for(let j = 0; j < 3; j++) {
+            let img = new Image();
+            img.src = "assets/" + i.toString() + "/" + numberToABC(j) + ".png";
+            img.alt = games[i][j].description;
+            img.style.width = "80%";
+            picList.push(img);
+        }
+        Pictures.push(picList);
+    }
+}
+
+
+initialize();
