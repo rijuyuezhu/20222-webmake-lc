@@ -5,17 +5,14 @@ const games = [
         {
             description: "A. 手机天线",
             cor: 1,
-            reason: " 显然是"
         },
         {
             description: "B. 电容",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "C. 雷达天线屏蔽罩",
             cor: 1,
-            reason: "显然是"
         }
     ],
 
@@ -24,17 +21,14 @@ const games = [
         {
             description: "A. 航空航天材料",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "B. 口香糖",
             cor: 0,
-            reason: "显然不是"
         },
         {
             description: "C. 防弹衣",
             cor: 1,
-            reason: "显然是"
         }
     ],
 
@@ -43,17 +37,14 @@ const games = [
         {
             description: "A. 建筑承重",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "B. 牵引绳缆",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "C. 软糖",
             cor: 0,
-            reason: "显然不是"
         }
     ],
     
@@ -62,17 +53,14 @@ const games = [
         {
             description: "A. 人造心脏",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "B. 人造血管",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "C. 防弹衣",
             cor: 1,
-            reason: "显然是"
         }
     ],
 
@@ -81,17 +69,14 @@ const games = [
         {
             description: "A. 防火材料",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "B. 棉纱手套",
             cor: 0,
-            reason: "显然不是"
         },
         {
             description: "C. 消防沙",
             cor: 0,
-            reason: "显然不是"
         }
     ],
 
@@ -100,19 +85,37 @@ const games = [
         {
             description: "A. 图像显示",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "B. 信息存储",
             cor: 1,
-            reason: "显然是"
         },
         {
             description: "C. 温度检测",
             cor: 1,
-            reason: "显然是"
         }
     ]
+];
+
+const answersReason = [
+
+    //problem 0
+    "LCP 具有优秀的<b>介电性能</b>，可实现对信息<b>高速传输、低时延</b>的要求。",
+
+    //problem 1
+    "LCP 具有优异的<b>机械性能</b>，突出的耐热性能，极小的膨胀系数，低的收缩率和高的稳定性，绝缘性和耐化学腐蚀性等特点，是一种优秀的<b>工程材料</b>。",
+
+    //problem 2
+    "LCP具有良好的机修强度和<b>抗拉伸的特性</b>，且具有记忆功能，能在一定程度上回弹回初始状态。",
+
+    //problem 3
+    "LCP 具备无毒性、耐腐蚀性、力学性能长期保持率高、易加工成各种形状、生物相容强等特征，可作为<b>生物医用材料</b>，在取代、修复生物组织或器官功能领域应用广泛。",
+
+    //problem 4
+    "LCP 具有良好的<b>耐高温特性</b>。一些 LCP 热塑性弹性体可耐高温，但是在高温下易<b>软化</b>，故应用受到限制。",
+
+    //problem 5
+    "LCP 具有优秀的介电常数、介电损耗、插损等性能，在<b>信息检测和传导</b>领域表现出优异的物理化学性质。"
 ];
 
 const Pictures = [];
@@ -191,16 +194,8 @@ const showProblem = () => {
 }
 
 const generateReason = () => {
-    const answerJudge = Array.from(document.getElementsByClassName("answerJudge"));
-    const answerReason = Array.from(document.getElementsByClassName("answerReason"));
-    for(let i = 0; i < 3; i++) {
-        if(games[nowProblemNumber][i].cor) {
-            answerJudge[i].innerHTML = numberToABC(i) + ". 运用了 LCP";
-        } else {
-            answerJudge[i].innerHTML = numberToABC(i) + ". 未运用 LCP";
-        }
-        answerReason[i].innerHTML = games[nowProblemNumber][i].reason;
-    }
+    const answerReason = document.getElementById("answerReason");
+    answerReason.innerHTML = answersReason[nowProblemNumber];
 }
 
 const answerProblem = () => {
@@ -218,10 +213,10 @@ const answerProblem = () => {
     
     const answerReact = document.getElementById("answerReact");
     if(correct) {
-        answerReact.innerHTML = "恭喜，答案正确！答案是 " + answerString;
+        answerReact.innerHTML = "恭喜，答案正确&#128512;！答案是 " + answerString + "。";
         ++point;
     } else {
-        answerReact.innerHTML = "抱歉，答案错误！答案是 " + answerString;
+        answerReact.innerHTML = "抱歉，答案错误&#128517;！答案是 " + answerString + "。";
     }
     generateReason();
     updateScore();
@@ -257,12 +252,12 @@ const gameRun = () => {
     document.getElementById("introMessage").style.display = "none";
     document.getElementById("gamePannel").style.display = "block";
     document.getElementById("countPannel").style.display = "flex";
-    jumpGame();
     point = 0;
     nowProblemNumber = 0;
     ansProblemNumber = 0;
     updateScore();
     showProblem();
+    jumpGame();
 }
 
 const initialize = () => {
