@@ -38,13 +38,13 @@
 
 讲述波奇酱的故事，作为整个网站的引子。
 
-### PART II Introduction
+### PART II Introduction(已完成)
 
 主要介绍液晶高分子的基础内容，采用多个章节进行介绍。
 
 要求：分各个章节讲述 LCP 的各种性质。需要让初学者对 LCP 具有一定的认识，能够完成 Guess 部分
 
-### PART III Guess
+### PART III Guess(已完成)
 
 给出图片（三选一，或其他形式），猜猜哪个图片应用了 LCP。
 
@@ -71,7 +71,7 @@
 |PART 名称|负责人(内容)|负责人(网页)|备注|
 |:-:|:-:|:-:|:-:|
 |PART I Bocci story|/|/|已完成|
-|PART II Introduction|黄嘉祺|黄文睿||
+|PART II Introduction|黄嘉祺|黄文睿|已完成|
 |PART III Guess|李昊洋|黄文睿|已完成|
 |PART IV Factory|王卫东|李瑞晨||
 |PART V Quiz|李昊洋|李瑞晨||
