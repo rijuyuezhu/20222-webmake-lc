@@ -168,7 +168,7 @@ const updateScore = () => {
 }
 
 const jumpGame = () => {
-    target = document.getElementById("countPannel");
+    const target = document.getElementById("countPannel");
     window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
 }
 
