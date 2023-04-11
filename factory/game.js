@@ -1,7 +1,3 @@
-/*const dialogueBox = document.querySelector('.dialogue-box');*/
-const name = document.querySelector('.name');
-const content = document.querySelector('.content');
-const nextButton = document.querySelector('.next-button');
 
 // 对话框中的内容
 const dialogue = [
@@ -18,15 +14,15 @@ const dialogue = [
         content: '看！是纺纱机欸！'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（对防护材料的需求正在上升，在杜邦的旧砖厂，凯夫拉纺纱机正在不停地工作。）。'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（声音的响声）。'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（杜邦公司的比尔·哈里森（Bill Harrison）展示了数百个等待发货的凯夫拉线轴。它们在荧光灯下闪闪发光。）'
     },
     {
@@ -42,7 +38,7 @@ const dialogue = [
         content: '杜邦化学家斯蒂芬妮·克沃勒克（Stephanie Kwolek）于1965年发现了Kevlar。她很快意识到这种分子具有有趣的特性。它重量轻，耐热，强度是钢的五倍。起初，杜邦认为他们可以使用Kevlar来制造更耐用的汽车轮胎。然后他们意识到它可以做得更好。'
     },
     {
-        name: '',
+        name: '<br>',
         content: '(展开： Kevlar，是美国杜邦公司于1965年推出的一种芳香聚酰胺类合成纤维，发明者为波兰裔美国化学家斯蒂芬妮·克沃勒克。凯芙拉极佳的抗拉性能，其强度为同等质量钢铁的五倍，而密度仅为钢铁约五分之一（凯芙拉密度为每立方公分1.44克；钢铁密度为每立方公分7.859克），因此在70年代初被用于替代赛车轮胎中的部分钢材。此外，凯芙拉不会像钢铁般与氧气和水产生锈蚀。现在凯芙拉广泛用于船体、飞机、自行车轮胎、军用头盔、防弹背心等。其主要弱点为于碱性环境下，或暴露于氯及紫外线之下时，将渐渐被分解。)'
     },
     {
@@ -54,7 +50,7 @@ const dialogue = [
         content: '（内心活动：好玩）'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（枪声，虹夏与Bocchi看向一边的展示台）'
     },
     {
@@ -102,7 +98,7 @@ const dialogue = [
         content: '在距离刺伤实验室几扇门的地方，十几个丙烷火焰喷射器产生了一个火球，吞没了热人。他是一个六英尺高的人体模型，上面覆盖着122个热传感器。'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（火灾爆发的声音）'
     },
     {
@@ -122,10 +118,6 @@ const dialogue = [
         content: '带我们去看看工艺流程吧~（离开实验室）'
     },
     {
-        name: '',
-        content: ''
-    },
-    {
         name: '第二部分',
         content: '参观工艺流程'
     },
@@ -138,7 +130,7 @@ const dialogue = [
         content: '那这工艺正好可以帮你做LCP琴弦！'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（Part 1）'
     },
     {
@@ -174,7 +166,7 @@ const dialogue = [
         content: '液…液压机…'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（Part 2）'
     },
     {
@@ -186,7 +178,7 @@ const dialogue = [
         content: '哇，这就是你说的微孔起泡注射设备耶！'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（Part 3）'
     },
     {
@@ -198,7 +190,7 @@ const dialogue = [
         content: '哦，看到你桌上的设计图纸了——'
     },
     {
-        name: '',
+        name: '<br>',
         content: '（参观结束，Bocchi获得了想要的由纤维成型工艺做成的LCP琴弦~）'
     },
     {
@@ -207,14 +199,36 @@ const dialogue = [
     }
 ];
 
-let index = -1;
+const jumpTo = (element) => {
+    window.scrollTo({"behavior": "smooth", "top": element.offsetTop});
+}
+const gameEnd = () => {
+    // end game
+    document.getElementById("game").style.display = "none";
+    document.getElementById("returnBox").style.display = "block";
+}
 
+let index = -1;
+const diagContent = document.getElementById("diagContent");
 // 更新对话框中的内容
 function updateDialogue() {
     index++;
+    if(index === dialogue.length-1) {
+        document.getElementById("nextButton").innerHTML = "结束游戏";
+    } else if(index === dialogue.length) {
+        gameEnd();
+        return ;
+    }
     const currentDialogue = dialogue[index];
-    name.innerText = currentDialogue.name;
-    content.innerText = currentDialogue.content;
+    const contentName = document.createElement("h2");
+    contentName.class = "name";
+    contentName.innerHTML = currentDialogue.name;
+    diagContent.appendChild(contentName);
+    const content = document.createElement("p");
+    content.class = "content";
+    content.innerHTML = currentDialogue.content;
+    diagContent.appendChild(content);
+    jumpTo(contentName)
 }
 
 const jumpGame = () => {
@@ -225,4 +239,5 @@ const gameRun = () => {
     document.getElementById("introMessage").style.display = "none";
     document.getElementById("game").style.display = "block";
     jumpGame();
+    updateDialogue();
 }

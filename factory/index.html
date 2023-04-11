@@ -19,7 +19,7 @@
             <hr class="hr-space-square" />
 
             <div class="u-center" id="introMessage">
-                <h2>游戏规则</h2>
+                <h2>提示</h2>
                 <p>点击画面下方的<b>下一幕</b>按钮即可不断欣赏优美的情节</p>
                 <button type="button" class="default-button" onclick="gameRun()">
                         <h3>开始游戏</h3>
@@ -28,10 +28,12 @@
 
             <div id="game" class="flex-container u-center" style="display: none;">
                 <!--<div class="background"></div>-->
-                <div class="dialogue-box center-block-no-confine">
+                <div class="dialogue-box center-block-no-confine" id="diagContent">
                     <h2 class="name"></h2>
                     <p class="content"></p>
-                    <button class="next-button" onclick="updateDialogue()">下一步</button>
+                </div>
+                <div class="dialogue-box center-block-no-confine">
+                    <button class="next-button" id="nextButton" onclick="updateDialogue()">下一步</button>
                 </div>
             </div>
 
