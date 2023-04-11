@@ -49,7 +49,7 @@ const questions = [
         answer: 0,
     },
     {
-        question: "决定 LCP 财产的主要因素是什么？",
+        question: "决定 LCP 性质的主要因素是什么？",
         options: ["分子量", "分子结构","加工条件","以上均无"],
         answer: 1,
     },
@@ -118,14 +118,14 @@ const chooseOption = (id) => {
 }
 const createOptionButton = (id) => {
     const optionArray = document.getElementById("optionArray");
-    optionArray.innerHTML +=
-        "<div class=\"flex-container vertical\">\n" +
-        "<div class=\"flex-grow center-block-no-confine\">\n" +
-        "<div class=\"u-center\" >\n" +
-        "<button type=\"button\" class=\"optionButtons default-button\" onclick=\"chooseOption(" +
-        (id).toString() + ")\"><h3>" +
-        questions[nowProblemNumber].options[id] +
-        "</h3></button>\n" + "</div>\n" + "</div>\n" + "</div>\n";
+    const button = document.createElement("button");
+    button.innerHTML = "<h3>" + questions[nowProblemNumber].options[id] + "</h3>";
+    button.className = "default-button optionButtons";
+    button.onclick = () => {
+        chooseOption(id);
+    }
+    optionArray.appendChild(button);
+    optionArray.appendChild(document.createElement("br"));
 }
 
 const clearOptionButton = () =>{
@@ -150,8 +150,16 @@ const showProblem = () => {
     document.getElementById("optionArray").style.display = "block";
     document.getElementById("buttonArray").style.display = "block";
 }
+const randomShuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 const gameRun = () => {
     //Begin
+    randomShuffle(questions);
     document.getElementById("introMessage").style.display = "none";
     document.getElementById("gamePanel").style.display = "block";
     document.getElementById("countPanel").style.display = "flex";
