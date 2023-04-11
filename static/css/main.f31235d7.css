@@ -1,0 +1,42 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+html {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAElBMVEX///////////////////////+65XQCAAAABXRSTlPUzXppDN7WmLAAAAAZSURBVAjXY3ASVGEwDQ1mYA0NAGEQGyQGAC9SA/00lbgwAAAAAElFTkSuQmCC)
+      3 3,
+    default;
+}
+.ako-cursor-container {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+.ako-cursor-container .ako-cursor-effect,
+.ako-cursor-container .ako-cursor-inner,
+.ako-cursor-container .ako-cursor-outer {
+  border-radius: 50%;
+  position: fixed;
+}
+.ako-cursor-container .ako-cursor-outer {
+  border: 1px solid #444444;
+  height: 36px;
+  transition: background-color 0.3s, width 0.3s, height 0.3s;
+  width: 36px;
+  z-index: 999999;
+}
+.ako-cursor-container .ako-cursor-effect {
+  border: 4px solid #353535;
+  height: 80px;
+  opacity: 0;
+  width: 80px;
+  z-index: 999998;
+}
+/*# sourceMappingURL=main.f31235d7.css.map*/
