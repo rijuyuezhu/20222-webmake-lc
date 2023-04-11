@@ -214,7 +214,7 @@ const diagContent = document.getElementById("diagContent");
 function updateDialogue() {
     index++;
     if(index === dialogue.length-1) {
-        document.getElementById("nextButton").innerHTML = "结束游戏";
+        document.getElementById("nextButton").innerHTML = "结束参观";
     } else if(index === dialogue.length) {
         gameEnd();
         return ;
