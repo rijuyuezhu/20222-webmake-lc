@@ -3,10 +3,10 @@
 const dialogue = [
     {
         name: '第一部分',
-        content: 'Bocchi与虹夏 进入工厂 见到（工厂主）与工厂主对话 发现LCP纤维强度'
+        content: '波奇与虹夏 进入工厂 见到（工厂主）与工厂主对话 发现LCP纤维强度'
     },
     {
-        name: 'Background',
+        name: '故事背景',
         content: '自从杜邦科学家发现Kevlar以来已经有40年了，研究人员最初认为凯夫拉尔可能对轮胎有益。现在它是防弹背心的代名词。最大的工厂位于弗吉尼亚州里士满。'
     },
     {
@@ -30,7 +30,7 @@ const dialogue = [
         content: '我不得不说，我没有准备好它是多么令人惊讶的美丽。我的意思是，它看起来像这些美丽的线轴，就像数千根金线或其他东西一样。这就像你要做一幅挂毯。'
     },
     {
-        name: 'Bocchi',
+        name: '波奇',
         content: '哇！'
     },
     {
@@ -46,12 +46,12 @@ const dialogue = [
         content: '这种材料居然可以做轮胎！'
     },
     {
-        name: 'Bocchi',
+        name: '波奇',
         content: '（内心活动：好玩）'
     },
     {
         name: '<br>',
-        content: '（枪声，虹夏与Bocchi看向一边的展示台）'
+        content: '（枪声，虹夏与波奇看向一边的展示台）'
     },
     {
         name: '工厂主',
@@ -110,7 +110,7 @@ const dialogue = [
         content: '我们的梦想是一种轻质耐用的材料，可以承受从子弹到生物武器的一切。新技术正在酝酿之中。但凯夫拉已被证明是如此多才多艺和可靠，以至于专家预测它可能会以某种方式使用至少40年。'
     },
     {
-        name: '虹夏/Bocchi',
+        name: '虹夏/波奇',
         content: '好厉害！'
     },
     {
@@ -162,7 +162,7 @@ const dialogue = [
         content: '第三步——定型：用适当的方法, 使挤出的连续型材冷却定型为制品。'
     },
     {
-        name: 'Bocchi',
+        name: '波奇',
         content: '液…液压机…'
     },
     {
@@ -191,10 +191,10 @@ const dialogue = [
     },
     {
         name: '<br>',
-        content: '（参观结束，Bocchi获得了想要的由纤维成型工艺做成的LCP琴弦~）'
+        content: '（参观结束，波奇获得了想要的由纤维成型工艺做成的LCP琴弦~）'
     },
     {
-        name: '虹夏/Bocchi',
+        name: '虹夏/波奇',
         content: '真是不虚此行！'
     }
 ];
@@ -218,6 +218,10 @@ function updateDialogue() {
     } else if(index === dialogue.length) {
         gameEnd();
         return ;
+    }
+    if(index !== 0) {
+        diagContent.lastElementChild.style.color = "var(--col-very-slight-black)";
+        diagContent.lastElementChild.previousElementSibling.style.color = "var(--col-very-slight-black)";
     }
     const currentDialogue = dialogue[index];
     const contentName = document.createElement("h2");
