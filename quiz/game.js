@@ -197,6 +197,7 @@ const nextProblem = () => {
         gameEnd();
     } else {
         showProblem();
+        jumpGame();
     }
 }
 
