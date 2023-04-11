@@ -4,32 +4,32 @@ let nowProblemNumber = 0;
 let ansProblemNumber = 0;
 const questions = [
     {
-        question: "LCP的分子结构是什么？",
+        question: "LCP 的分子结构是什么？",
         options: ["随机线圈", "重复单元的长链", "交联链","芳香环"],
         answer: 3,
     },
     {
-        question: "LCP的熔点是多少？",
+        question: "LCP 的熔点是多少？",
         options: ["低于100°C", "100-200摄氏度", " 200-300摄氏度","300°C以上"],
         answer: 2,
     },
     {
-        question: "LCP是热塑性聚合物还是热固性聚合物？",
+        question: "LCP 是热塑性聚合物还是热固性聚合物？",
         options: ["热塑性", "热固性"],
         answer: 0,
     },
     {
-        question: "LCP的一些常见应用是什么？",
+        question: "LCP 的一些常见应用是什么？",
         options: ["汽车零部件", "电子元件","航空航天组件","以上所有内容"],
         answer: 3,
     },
     {
-        question: "在电子应用中使用LCP的主要优势是什么？",
+        question: "在电子应用中使用 LCP 的主要优势是什么？",
         options: ["低介电常数", "高热导率","高抗拉强度","以上均无"],
         answer: 0,
     },
     {
-        question: "LCP通常使用哪种类型的处理？",
+        question: "LCP 通常使用哪种类型的处理？",
         options: ["注塑成型", "挤压","吹塑成型","压缩成型"],
         answer: 0,
     },
@@ -39,45 +39,45 @@ const questions = [
         answer: 0,
     },
     {
-        question: "LCP与其他热塑性塑料有何不同？",
+        question: "LCP 与其他热塑性塑料有何不同？",
         options: ["熔点更高", "具有更复杂的分子结构","具有更好的尺寸稳定性","以上所有内容"],
         answer: 3,
     },
     {
-        question: "LCP是可回收材料吗？",
+        question: "LCP 是可回收材料吗？",
         options: ["是", "否"],
         answer: 0,
     },
     {
-        question: "决定LCP财产的主要因素是什么？",
+        question: "决定 LCP 财产的主要因素是什么？",
         options: ["分子量", "分子结构","加工条件","以上均无"],
         answer: 1,
     },
     {
-        question: "LCP具有记忆功能的基础是什么？",
+        question: "LCP 具有记忆功能的基础是什么？",
         options: ["动态共价键", "静态共价键","动态离子键","静态离子键"],
         answer: 0,
     },
     {
-        question: "LCP具有变色的能力的原因是什么？",
+        question: "LCP 具有变色的能力的原因是什么？",
         options: ["液晶分子具有类似于金属键的电子海", "液晶分子的共价键震动范围广","液晶分子成周期性排列","液晶分子之间形成供电子流动离域π键"],
         answer: 2,
     },
     {
-        question: "无机纤维与LCP基底之间的相容性差，极大提高了LCP的抗冲击能力，这属于LCP在哪一方面的应用？",
+        question: "无机纤维与 LCP 基底之间的相容性差，极大提高了 LCP 抗冲击能力，这属于 LCP 在哪一方面的应用？",
         options: ["通信领域", "生物医用领域","复合材料领域","光学器件领域"],
         answer: 2,
     },
     {
-        question: "环氧中引入液晶后，材料的热导是传统环氧热导率的1.5倍，这属于LCP在哪一方面的应用？",
+        question: "环氧中引入液晶后，材料的热导是传统环氧热导率的 1.5 倍，这属于 LCP 在哪一方面的应用？",
         options: ["通信领域", "生物医用领域","复合材料领域","导热领域"],
         answer: 3,
     },
     {
-        question: "研究表明，许多生物组织具有液晶态有序结构。LCP具有高强度、高模量、易加工、自增强等优异性能，可以用于人工肌肉、人工骨骼等方面。这属于LCP在哪一方面的应用？",
+        question: "研究表明，许多生物组织具有液晶态有序结构。LCP 具有高强度、高模量、易加工、自增强等优异性能，可以用于人工肌肉、人工骨骼等方面。这属于 LCP 在哪一方面的应用？",
         options: ["通信领域", "生物医用领域","复合材料领域","导热领域"],
         answer: 1,
-    },
+    }
 ];
 const updateScore = () => {
     const score = document.getElementById("scoreShow");
