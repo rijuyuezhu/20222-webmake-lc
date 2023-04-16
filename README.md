@@ -70,7 +70,7 @@
 
 |PART 名称|负责人(内容)|负责人(网页)|备注|
 |:-:|:-:|:-:|:-:|
-|PART I Bocci story|/|/|已完成|
+|PART I Bocci story|王卫东|黄文睿|已完成|
 |PART II Introduction|黄嘉祺|黄文睿|已完成|
 |PART III Guess|李昊洋|黄文睿|已完成|
 |PART IV Factory|王卫东|李瑞晨|已完成|
